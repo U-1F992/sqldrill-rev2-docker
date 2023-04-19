@@ -1,0 +1,12 @@
+version: '3.1'
+
+services:
+  db:
+    container_name: sqldrill-rev2
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: workbook
